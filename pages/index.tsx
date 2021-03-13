@@ -1,65 +1,73 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main className="flex">
+        <div style={{ width: "60%", height: "100vh", background: "red" }}>
+          <Image src="/assets/images/hanoi-map.webp" layout="fill" />
+        </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div
+          style={{
+            width: "40%",
+            height: "100vh",
+            background: "#fff",
+            borderTopLeftRadius: 16,
+            borderBottomLeftRadius: 16,
+            padding: 32,
+            zIndex: 99,
+          }}
+        >
+          <nav className="flex justify-between items-center">
+            <ul className="flex justify-between">
+              <li>
+                <a href="">Menu Item 1</a>
+              </li>
+              <li style={{ marginLeft: 16 }}>
+                <a href="">Menu Item 1</a>
+              </li>
+              <li style={{ marginLeft: 16 }}>
+                <a href="">Menu Item 1</a>
+              </li>
+            </ul>
+            <div>
+              <div
+                style={{
+                  background: "lightblue",
+                  width: 50,
+                  height: 50,
+                  borderRadius: 10,
+                }}
+              ></div>
+            </div>
+          </nav>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <h1 style={{ fontSize: 40 }}>Hanoi</h1>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div style={{ marginTop: "4rem" }}>
+            <input
+              placeholder="Tìm kiếm"
+              style={{
+                paddingLeft: 16,
+                paddingRight: 16,
+                height: 40,
+                width: "100%",
+                borderRadius: 32,
+                background: "#EFEFEF",
+                outline: "none",
+              }}
+            />
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
-  )
+  );
 }
