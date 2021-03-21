@@ -1,0 +1,38 @@
+[
+  {
+    "name": "about___vi",
+    "path": "/about",
+    "component": "D:\\\\Code\\\\laca\\\\laca-web\\\\pages\\\\about\\\\index.vue",
+    "chunkName": "pages/about/index"
+  },
+  {
+    "name": "index___en",
+    "path": "/en",
+    "component": "D:\\\\Code\\\\laca\\\\laca-web\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "auth-login___vi",
+    "path": "/auth/login",
+    "component": "D:\\\\Code\\\\laca\\\\laca-web\\\\pages\\\\auth\\\\login\\\\index.vue",
+    "chunkName": "pages/auth/login/index"
+  },
+  {
+    "name": "about___en",
+    "path": "/en/about",
+    "component": "D:\\\\Code\\\\laca\\\\laca-web\\\\pages\\\\about\\\\index.vue",
+    "chunkName": "pages/about/index"
+  },
+  {
+    "name": "auth-login___en",
+    "path": "/en/auth/login",
+    "component": "D:\\\\Code\\\\laca\\\\laca-web\\\\pages\\\\auth\\\\login\\\\index.vue",
+    "chunkName": "pages/auth/login/index"
+  },
+  {
+    "name": "index___vi",
+    "path": "/",
+    "component": "D:\\\\Code\\\\laca\\\\laca-web\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
