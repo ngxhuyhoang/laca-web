@@ -10,13 +10,7 @@
           </v-col>
 
           <v-col>
-            <v-sheet
-              v-for="n in 5"
-              :key="n"
-              min-height="50vh"
-              rounded="lg"
-              class="mb-10"
-            >
+            <v-sheet min-height="70vh" rounded="lg">
               <!--  -->
             </v-sheet>
           </v-col>

@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 import { firebaseConfig } from './firebase-config'
+import VnLocale from './i18n/locales/vi-VN'
+import EnLocale from './i18n/locales/en-US'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -40,8 +42,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+
     // https://firebase.nuxtjs.org/guide/getting-started
     '@nuxtjs/firebase',
+
+    // https://i18n.nuxtjs.org/setup
+    'nuxt-i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -51,7 +57,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -75,6 +81,18 @@ export default {
       auth: true,
       messaging: true,
       analytics: true,
+    },
+  },
+
+  i18n: {
+    locales: ['en', 'vi'],
+    defaultLocale: 'vi',
+    vueI18n: {
+      fallbackLocale: 'vi',
+      messages: {
+        en: EnLocale,
+        vi: VnLocale,
+      },
     },
   },
 }
