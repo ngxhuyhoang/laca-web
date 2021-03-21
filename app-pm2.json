@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "laca-web",
+      "script": "npm",
+      "args": "start"
+    }
+  ]
+}
