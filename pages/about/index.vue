@@ -6,7 +6,7 @@
       <v-container>
         <v-row>
           <v-col cols="2">
-            <AppSideBar />
+            <AppDrawer />
           </v-col>
 
           <v-col>
@@ -22,12 +22,12 @@
 
 <script>
 import AppNavbar from '~/components/app-navbar'
-import AppSideBar from '~/components/app-sidebar'
+import AppDrawer from '~/components/app-drawer'
 
 export default {
   components: {
     AppNavbar,
-    AppSideBar,
+    AppDrawer,
   },
 }
 </script>
