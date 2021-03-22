@@ -17,7 +17,7 @@
                     </v-avatar>
                   </v-col>
                   <v-col cols="10">
-                    <v-btn elevation="0" nuxt plain="false" shaped small>
+                    <v-btn elevation="0" nuxt shaped small>
                       Estella Adkins
                     </v-btn>
                   </v-col>
@@ -28,7 +28,11 @@
                 height="250"
                 src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
               ></v-img>
-              <v-card-title>Cafe Badilico</v-card-title>
+              <v-card-title>
+                <v-btn elevation="0" nuxt shaped small @click="drawer = !drawer"
+                  >Cafe Badilico</v-btn
+                >
+              </v-card-title>
               <v-card-text>
                 <v-row align="center" class="mx-0">
                   <v-rating
@@ -63,6 +67,10 @@
         </v-row>
       </v-container>
     </v-main>
+
+    <v-navigation-drawer v-model="drawer" absolute right temporary width="1280">
+      <h1>Chi tiết bài viết sẽ ở đây</h1>
+    </v-navigation-drawer>
   </v-app>
 </template>
 
@@ -74,6 +82,11 @@ export default {
   components: {
     AppNavbar,
     AppDrawer,
+  },
+  data() {
+    return {
+      drawer: true,
+    }
   },
 }
 </script>

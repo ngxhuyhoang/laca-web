@@ -44,6 +44,7 @@ export default {
   data() {
     return {
       menu: [{ label: 'Thông tin' }],
+      drawer: null,
     }
   },
 }
