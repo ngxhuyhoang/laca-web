@@ -5,9 +5,9 @@ import EnLocale from './i18n/locales/en-US'
 
 export default {
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-ssr
-  ssr: false,
+  ssr: true,
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-target
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
