@@ -4,6 +4,11 @@ import VnLocale from './i18n/locales/vi-VN'
 import EnLocale from './i18n/locales/en-US'
 
 export default {
+  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-ssr
+  ssr: false,
+  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-target
+  target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - laca-web',
