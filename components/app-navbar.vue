@@ -12,12 +12,20 @@
         placeholder="Tìm kiếm"
       ></v-text-field>
     </v-responsive>
+    <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+    <v-navigation-drawer v-model="drawer" app absolute temporary right>
+      <v-container>
+        <h1>Haha</h1>
+      </v-container>
+    </v-navigation-drawer>
   </v-app-bar>
 </template>
 
 <script>
 export default {
   data: () => ({
+    drawer: false,
     links: [
       { label: 'Trang chủ', path: '/' },
       { label: 'Về chúng tôi', path: '/about' },

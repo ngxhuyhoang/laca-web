@@ -24,6 +24,12 @@
         </v-list-item-icon>
         <v-list-item-content> {{ $t('home') }} </v-list-item-content>
       </v-list-item>
+      <v-list-item link>
+        <v-list-item-icon>
+          <v-icon>mdi-bookmark</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content> {{ $t('bookmark') }} </v-list-item-content>
+      </v-list-item>
     </v-list>
 
     <v-divider></v-divider>

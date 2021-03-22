@@ -3,12 +3,28 @@
     <AppDrawer />
 
     <v-main class="grey lighten-3">
-      <AppNavbar />
+      <v-app-bar app flat color="white">
+        <v-app-bar-title>La Cà Review</v-app-bar-title>
+        <v-spacer></v-spacer>
+        <v-responsive max-width="260">
+          <v-text-field
+            dense
+            flat
+            hide-details
+            rounded
+            solo-inverted
+            placeholder="Tìm kiếm"
+          ></v-text-field>
+        </v-responsive>
+        <v-app-bar-nav-icon @click="drawer = !drawer">
+          <v-icon :color="drawer && 'red'">mdi-map-marker</v-icon>
+        </v-app-bar-nav-icon>
+      </v-app-bar>
 
       <v-container class="mt-5">
         <v-row>
           <v-col v-for="n in 5" :key="n" cols="3">
-            <v-card nuxt rounded="xl">
+            <v-card nuxt rounded="lg">
               <v-card-title>
                 <v-row>
                   <v-col cols="2">
@@ -28,11 +44,7 @@
                 height="250"
                 src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
               ></v-img>
-              <v-card-title>
-                <v-btn elevation="0" nuxt shaped small @click="drawer = !drawer"
-                  >Cafe Badilico</v-btn
-                >
-              </v-card-title>
+              <v-card-title> Cafe Badilico </v-card-title>
               <v-card-text>
                 <v-row align="center" class="mx-0">
                   <v-rating
@@ -68,8 +80,10 @@
       </v-container>
     </v-main>
 
-    <v-navigation-drawer v-model="drawer" absolute right temporary width="1280">
-      <h1>Chi tiết bài viết sẽ ở đây</h1>
+    <v-navigation-drawer v-model="drawer" app right width="360">
+      <v-container>
+        <h1>Gần bạn</h1>
+      </v-container>
     </v-navigation-drawer>
   </v-app>
 </template>
@@ -86,6 +100,12 @@ export default {
   data() {
     return {
       drawer: false,
+      links: [
+        { label: 'Trang chủ', path: '/' },
+        { label: 'Về chúng tôi', path: '/about' },
+      ],
+      model: 0,
+      colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
     }
   },
 }
