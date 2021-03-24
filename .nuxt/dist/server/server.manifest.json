@@ -1,0 +1,17 @@
+{
+  "entry": "server.js",
+  "files": {
+    "components/app-navbar.js": "components/app-navbar.js",
+    "pages/auth/login/index.js": "pages/auth/login/index.js",
+    "pages/detail/index.js": "pages/detail/index.js",
+    "pages/index.js": "pages/index.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "components/app-navbar.js": "components/app-navbar.js.map",
+    "pages/auth/login/index.js": "pages/auth/login/index.js.map",
+    "pages/detail/index.js": "pages/detail/index.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "server.js": "server.js.map"
+  }
+}

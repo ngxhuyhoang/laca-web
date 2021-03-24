@@ -1,0 +1,44 @@
+[
+  {
+    "name": "detail___vi",
+    "path": "/detail",
+    "component": "/Users/nguyenhuyhoang/Code/laca-web/pages/detail/index.vue",
+    "chunkName": "pages/detail/index",
+    "_name": "_022ced8c"
+  },
+  {
+    "name": "index___en",
+    "path": "/en",
+    "component": "/Users/nguyenhuyhoang/Code/laca-web/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_26f761ec"
+  },
+  {
+    "name": "auth-login___vi",
+    "path": "/auth/login",
+    "component": "/Users/nguyenhuyhoang/Code/laca-web/pages/auth/login/index.vue",
+    "chunkName": "pages/auth/login/index",
+    "_name": "_df613f86"
+  },
+  {
+    "name": "detail___en",
+    "path": "/en/detail",
+    "component": "/Users/nguyenhuyhoang/Code/laca-web/pages/detail/index.vue",
+    "chunkName": "pages/detail/index",
+    "_name": "_022ced8c"
+  },
+  {
+    "name": "auth-login___en",
+    "path": "/en/auth/login",
+    "component": "/Users/nguyenhuyhoang/Code/laca-web/pages/auth/login/index.vue",
+    "chunkName": "pages/auth/login/index",
+    "_name": "_df613f86"
+  },
+  {
+    "name": "index___vi",
+    "path": "/",
+    "component": "/Users/nguyenhuyhoang/Code/laca-web/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_26f761ec"
+  }
+]

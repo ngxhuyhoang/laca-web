@@ -49,7 +49,7 @@
                 <v-icon>mdi-share-outline</v-icon>
               </v-btn>
               <v-spacer></v-spacer>
-              <v-btn icon>
+              <v-btn icon @click="snackbar = true">
                 <v-icon>mdi-bookmark-outline</v-icon>
               </v-btn>
             </v-card-actions>
@@ -57,6 +57,11 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <v-snackbar v-model="snackbar">
+      Đã lưu
+      <v-btn color="pink" text @click="snackbar = false"> Close </v-btn>
+    </v-snackbar>
   </div>
 </template>
 
@@ -70,6 +75,7 @@ export default {
         { label: 'Về chúng tôi', path: '/about' },
       ],
       model: 0,
+      snackbar: false,
       colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
     }
   },
