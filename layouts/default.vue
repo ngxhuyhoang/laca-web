@@ -17,7 +17,7 @@
           ></v-text-field>
         </v-responsive>
         <v-app-bar-nav-icon @click="drawer = !drawer">
-          <v-icon :color="drawer ? 'red' : undefined">mdi-map-marker</v-icon>
+          <v-icon>{{ drawer ? 'mdi-bell' : 'mdi-bell-outline' }}</v-icon>
         </v-app-bar-nav-icon>
       </v-app-bar>
 
@@ -26,17 +26,11 @@
 
     <v-navigation-drawer v-model="drawer" app right width="360">
       <v-container>
-        <h1>Gần bạn</h1>
-        <v-card
-          v-for="n in 10"
-          :key="n"
-          class="mx-auto mb-5"
-          max-width="344"
-          outlined
-        >
+        <h1>Thông báo</h1>
+        <v-card v-for="n in 5" :key="n" class="mx-auto mb-4" flat nuxt>
           <v-list-item three-line>
             <v-list-item-content>
-              <div class="overline mb-4">OVERLINE</div>
+              <div class="overline">OVERLINE</div>
               <v-list-item-title class="headline mb-1">
                 Headline 5
               </v-list-item-title>
@@ -45,15 +39,7 @@
                 fonwderfully</v-list-item-subtitle
               >
             </v-list-item-content>
-
-            <v-list-item-avatar tile size="80">
-              <img src="https://picsum.photos/80/80?random=1" />
-            </v-list-item-avatar>
           </v-list-item>
-
-          <v-card-actions>
-            <v-btn outlined rounded text> Xem thử </v-btn>
-          </v-card-actions>
         </v-card>
       </v-container>
     </v-navigation-drawer>
