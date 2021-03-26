@@ -27,7 +27,7 @@
     <v-navigation-drawer v-model="drawer" app right width="360">
       <v-container>
         <h1>Thông báo</h1>
-        <v-card v-for="n in 5" :key="n" class="mx-auto mb-4" flat nuxt>
+        <v-card v-for="n in 10" :key="n" class="mx-auto mb-4" flat nuxt>
           <v-list-item three-line>
             <v-list-item-content>
               <div class="overline">OVERLINE</div>
