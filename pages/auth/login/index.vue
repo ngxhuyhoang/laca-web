@@ -28,6 +28,9 @@ export default {
       try {
         const result = await firebase.auth().signInWithPopup(provider)
         console.log(result)
+        if (result) {
+          window.location.href = '/'
+        }
       } catch (e) {
         console.log(e)
       }

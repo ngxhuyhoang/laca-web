@@ -6,7 +6,7 @@
       </v-list-item-avatar>
     </v-list-item>
 
-    <v-list-item link>
+    <v-list-item link to="/user-profile">
       <v-list-item-content>
         <v-list-item-title class="title"> Huy Hoàng Nguyễn </v-list-item-title>
         <v-list-item-subtitle>
@@ -35,7 +35,7 @@
     <v-divider></v-divider>
 
     <v-list>
-      <v-list-item link>
+      <v-list-item link @click="signOut()">
         <v-list-item-icon>
           <v-icon>mdi-exit-to-app</v-icon>
         </v-list-item-icon>
@@ -46,12 +46,24 @@
 </template>
 
 <script>
+import firebase from 'firebase/app'
+
 export default {
   data() {
     return {
       menu: [{ label: 'Thông tin' }],
       drawer: null,
     }
+  },
+  methods: {
+    async signOut() {
+      try {
+        await firebase.auth().signOut()
+        window.location.href = '/auth/login'
+      } catch (e) {
+        console.log(e)
+      }
+    },
   },
 }
 </script>
