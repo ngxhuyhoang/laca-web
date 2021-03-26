@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <img src="~/assets/images/hanoi-map.jpeg" class="banner" />
+  <v-row>
+    <v-col cols="7">
+      <img src="~/assets/images/hanoi-map.jpeg" class="banner" />
+    </v-col>
 
-    <v-sheet height="300" class="login" rounded elevation="5">
-      <h2>Chào mừng bạn quay trở lại</h2>
-      <h4 class="mb-5">Đăng nhập để tiếp tục</h4>
-      <v-btn @click="login()">
-        <img src="~/assets/icons/google.png" class="google-icon" />
-        <div>Đăng nhập bằng Google</div>
-      </v-btn>
-    </v-sheet>
-  </div>
+    <v-col cols="5">
+      <div class="login">
+        <h2>Chào mừng bạn quay trở lại</h2>
+        <h4 class="mb-5">Đăng nhập để tiếp tục</h4>
+        <v-btn @click="login()">
+          <img src="~/assets/icons/google.png" class="google-icon" />
+          <div>Đăng nhập bằng Google</div>
+        </v-btn>
+      </div>
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">
@@ -44,7 +48,16 @@ export default {
 <style scoped>
 .banner {
   width: 100%;
-  max-height: 100vh;
+  height: 100vh;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 5px 0 50px #ccc;
+}
+
+.google-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 }
 
 .login {
@@ -52,15 +65,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 12.5%;
-  left: 25%;
-  right: 25%;
-}
-
-.google-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+  height: 100vh;
 }
 </style>
