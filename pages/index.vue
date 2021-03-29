@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>{{ test }}</h1>
     <v-container class="mt-5">
       <v-row>
         <v-col v-for="n in 5" :key="n" cols="3">
@@ -66,6 +67,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   layout: 'home',
   data() {
@@ -80,5 +83,8 @@ export default {
       colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
     }
   },
+  computed: mapState({
+    test: (state) => state.modules.auth.test,
+  }),
 }
 </script>

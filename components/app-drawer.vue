@@ -2,15 +2,15 @@
   <v-navigation-drawer v-model="drawer" app class="pt-4" expand-on-hover>
     <v-list-item class="px-2">
       <v-list-item-avatar>
-        <v-img src="https://i.pravatar.cc/85"></v-img>
+        <v-img :src="user.avatar"></v-img>
       </v-list-item-avatar>
     </v-list-item>
 
     <v-list-item link to="/user-profile">
       <v-list-item-content>
-        <v-list-item-title class="title"> Huy Hoàng Nguyễn </v-list-item-title>
+        <v-list-item-title class="title">{{ user.name }}</v-list-item-title>
         <v-list-item-subtitle>
-          ngxhuyhoang@lacareview.com
+          {{ user.email }}
         </v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
@@ -47,6 +47,7 @@
 
 <script>
 import firebase from 'firebase/app'
+import { mapState } from 'vuex'
 
 export default {
   data() {
@@ -55,11 +56,14 @@ export default {
       drawer: null,
     }
   },
+  computed: mapState({
+    user: ({ modules }) => modules.auth.user,
+  }),
   methods: {
     async signOut() {
       try {
         await firebase.auth().signOut()
-        window.location.href = '/auth/login'
+        this.$router.replace('/auth/login')
       } catch (e) {
         console.log(e)
       }
