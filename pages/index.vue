@@ -69,6 +69,10 @@
       </v-row>
     </v-container>
 
+    <v-btn fab color="warning" fixed bottom right class="mb-10 mr-5">
+      <v-icon>mdi-plus</v-icon>
+    </v-btn>
+
     <v-snackbar v-model="snackbar"> Đã lưu bài viết </v-snackbar>
   </div>
 </template>

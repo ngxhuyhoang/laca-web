@@ -81,7 +81,21 @@
                 </v-avatar>
                 Username
               </v-card-title>
-              <v-card-text>Good</v-card-text>
+              <v-card-text
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                voluptates error saepe cum corrupti, dicta numquam quisquam ad
+                hic fuga alias voluptas aliquid! Neque quisquam eveniet veniam,
+                laudantium eos nihil, earum illum possimus totam ex deleniti
+                commodi praesentium ratione inventore. Doloremque temporibus cum
+                facere molestias laudantium alias? Voluptates dolores tempora
+                alias non explicabo autem modi a iure, blanditiis, numquam
+                doloremque recusandae ipsa, optio dicta odit et. Ullam dolore,
+                dolores odit officiis voluptates aperiam! Animi vel iusto
+                accusamus assumenda natus debitis deleniti impedit, inventore ut
+                necessitatibus incidunt repellendus culpa aliquam sit reiciendis
+                corporis omnis neque ipsum tempora, voluptate esse! Numquam,
+                sapiente!</v-card-text
+              >
             </v-card>
           </v-container>
         </v-sheet>
