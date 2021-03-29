@@ -22,10 +22,73 @@
 
     <v-row class="mt-10">
       <v-col cols="4">
-        <v-sheet height="500" rounded="lg"></v-sheet>
+        <v-sheet rounded="lg">
+          <v-card v-for="n in 5" :key="n" elevation="0">
+            <v-card-title>Thông tin</v-card-title>
+            <v-card-text
+              >across feet got cast die let sense drove suit recognize balloon
+              develop fun steep time thing strong building held depend
+              frequently tune evidence flew</v-card-text
+            >
+          </v-card>
+        </v-sheet>
       </v-col>
       <v-col cols="8">
-        <v-sheet height="500" rounded="lg"></v-sheet>
+        <v-sheet v-for="n in 5" :key="n" rounded="lg" class="mb-5">
+          <v-carousel v-model="model" height="400">
+            <v-carousel-item v-for="(color, i) in 5" :key="i">
+              <v-img src="https://picsum.photos/500/500?random=1" />
+            </v-carousel-item>
+          </v-carousel>
+
+          <v-container>
+            <h2>The Coffee House</h2>
+            <v-container>
+              <v-row class="mt-1">
+                <p>Đánh giá:</p>
+                <v-rating
+                  :value="4.5"
+                  color="amber"
+                  dense
+                  half-increments
+                  readonly
+                  size="14"
+                />
+              </v-row>
+            </v-container>
+            <p>
+              <v-icon>mdi-map-marker</v-icon>
+              Số 1, ngõ 2, Trần Duy Hưng, Hà Nội
+            </p>
+            <p>
+              Địa chỉ quán của cô Xuân ở chợ Ngã Tư Sở, phía góc bên phải cổng
+              chợ, nhìn ra là chân cầu vượt. Nổi hứng lên là phải giải quyết nhu
+              cầu ngay cùng mấy đứa bạn. Đây là chỗ ăn nộm quen của nhà mình, có
+              uy tín và đông khách từ lâu. Nộm bò khô, bánh bột lọc, nộm sứa:
+              20k/suất đồng giá. Trà đá 3k/c Đồ ngon vừa vị Tuy nhiên không gian
+              quán hẹp và ở chợ gần các quầy đồ sống nên nhiều bạn sẽ ngại ngồi
+              lại Có thể gọi đem về nha Mình làm ở Ngã tư sở gần 5 năm và thi
+              thoảng lại ghé quán cũng chẳng biết quán có từ bao giờ nữa Rất
+              đáng để thử nha các bạn
+            </p>
+
+            <v-row class="pt-5 pb-5">
+              <v-btn icon large>
+                <v-icon>mdi-heart-outline</v-icon>
+              </v-btn>
+              <v-btn icon large>
+                <v-icon>mdi-chat-outline</v-icon>
+              </v-btn>
+              <v-btn icon large>
+                <v-icon>mdi-share-outline</v-icon>
+              </v-btn>
+              <v-spacer></v-spacer>
+              <v-btn large icon @click="snackbar = true">
+                <v-icon>mdi-bookmark-outline</v-icon>
+              </v-btn>
+            </v-row>
+          </v-container>
+        </v-sheet>
       </v-col>
     </v-row>
   </v-container>
