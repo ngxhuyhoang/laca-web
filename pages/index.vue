@@ -13,7 +13,16 @@
                   </v-avatar>
                 </v-col>
                 <v-col cols="10">
-                  <v-btn elevation="0" nuxt shaped small link light text>
+                  <v-btn
+                    elevation="0"
+                    nuxt
+                    shaped
+                    small
+                    link
+                    light
+                    text
+                    to="/user-profile/2"
+                  >
                     Estella Adkins
                   </v-btn>
                 </v-col>

@@ -6,7 +6,7 @@
       </v-list-item-avatar>
     </v-list-item>
 
-    <v-list-item link to="/user-profile">
+    <v-list-item link exact to="/user-profile/1">
       <v-list-item-content>
         <v-list-item-title class="title">{{ user.name }}</v-list-item-title>
         <v-list-item-subtitle>
