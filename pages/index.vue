@@ -3,7 +3,7 @@
     <h1>{{ test }}</h1>
     <v-container class="mt-5">
       <v-row>
-        <v-col v-for="n in 5" :key="n" cols="3">
+        <v-col v-for="n in 8" :key="n" cols="3">
           <v-card nuxt rounded="lg">
             <v-card-title>
               <v-row>
@@ -28,16 +28,17 @@
                 </v-col>
               </v-row>
             </v-card-title>
-
             <v-img
               height="250"
               src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
             ></v-img>
-            <v-card-title> Cafe Badilico </v-card-title>
+            <v-card-title>
+              <NuxtLink to="/detail/1"> Cafe Badilico </NuxtLink>
+            </v-card-title>
             <v-card-text>
               <v-row align="center" class="mx-0">
                 <v-rating
-                  :value="4.5"
+                  value="4.5"
                   color="amber"
                   dense
                   half-increments
@@ -68,10 +69,7 @@
       </v-row>
     </v-container>
 
-    <v-snackbar v-model="snackbar">
-      Đã lưu
-      <v-btn color="pink" text @click="snackbar = false"> Close </v-btn>
-    </v-snackbar>
+    <v-snackbar v-model="snackbar"> Đã lưu bài viết </v-snackbar>
   </div>
 </template>
 
