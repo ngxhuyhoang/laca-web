@@ -1,4 +1,7 @@
 import firebase from 'firebase/app'
+import Vuex from 'vuex'
+
+const a = new Vuex.Store({})
 
 export const state = () => ({
   user: {
@@ -12,17 +15,18 @@ export const getters = {}
 
 export const mutations = {}
 
-export const actions = {
-  login() {
+export const actions: any = {
+  async login(): Promise<any> {
     try {
       const provider = new firebase.auth.GoogleAuthProvider()
       const result = await firebase.auth().signInWithPopup(provider)
+      console.log(result)
       this.$router.replace('/')
     } catch (e) {
       console.log(e)
     }
   },
-  logout() {
+  async logout(): Promise<any> {
     try {
       await firebase.auth().signOut()
       this.$router.replace('/auth/login')

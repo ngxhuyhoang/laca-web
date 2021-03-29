@@ -3,9 +3,9 @@
     <v-sheet rounded="lg" class="a">
       <v-img src="https://picsum.photos/1920/200?random=1" class="cover" />
       <v-avatar size="150" class="avatar">
-        <v-img src="https://i.pravatar.cc/200" />
+        <v-img :src="user.avatar" />
       </v-avatar>
-      <h1 class="full-name">Sơn Tùng M-TP</h1>
+      <h1 class="full-name">{{ user.name }}</h1>
       <div class="count mt-5">
         <v-row>
           <v-col cols="6">
@@ -32,8 +32,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   layout: 'app-layout',
+  computed: mapState({
+    user: (state) => state.auth.user,
+  }),
 }
 </script>
 
