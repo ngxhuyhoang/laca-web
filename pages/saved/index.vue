@@ -3,7 +3,7 @@
     <h1>{{ test }}</h1>
     <v-container class="mt-5">
       <v-row>
-        <v-col v-for="n in 8" :key="n" cols="3">
+        <v-col v-for="n in 3" :key="n" cols="3">
           <v-card nuxt rounded="lg">
             <v-card-title>
               <v-row>
@@ -33,7 +33,7 @@
               src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
             ></v-img>
             <v-card-title>
-              <NuxtLink to="/detail/1"> Cafe Badilico </NuxtLink>
+              <NuxtLink exact to="/saved/1"> Cafe Badilico </NuxtLink>
             </v-card-title>
             <v-card-text>
               <v-row align="center" class="mx-0">
