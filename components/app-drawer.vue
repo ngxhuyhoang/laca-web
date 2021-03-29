@@ -46,8 +46,7 @@
 </template>
 
 <script>
-import firebase from 'firebase/app'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   data() {
@@ -57,17 +56,12 @@ export default {
     }
   },
   computed: mapState({
-    user: ({ modules }) => modules.auth.user,
+    user: (state) => state.auth.user,
   }),
   methods: {
-    async signOut() {
-      try {
-        await firebase.auth().signOut()
-        this.$router.replace('/auth/login')
-      } catch (e) {
-        console.log(e)
-      }
-    },
+    ...mapActions({
+      signOut: 'auth/logout',
+    }),
   },
 }
 </script>

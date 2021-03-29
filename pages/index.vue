@@ -84,7 +84,7 @@ export default {
     }
   },
   computed: mapState({
-    test: (state) => state.modules.auth.test,
+    test: (state) => state.auth.test,
   }),
 }
 </script>

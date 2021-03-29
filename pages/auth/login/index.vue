@@ -18,32 +18,13 @@
 </template>
 
 <script lang="ts">
-import firebase from 'firebase/app'
+import { mapActions } from 'vuex'
 
 export default {
   methods: {
-    async login() {
-      const provider = new firebase.auth.GoogleAuthProvider()
-
-      try {
-        const result = await firebase.auth().signInWithPopup(provider)
-        console.log(result)
-        if (result) {
-          window.location.href = '/'
-        }
-      } catch (e) {
-        console.log(e)
-      }
-    },
-
-    async logout() {
-      try {
-        const result = await firebase.auth().signOut()
-        console.log(result)
-      } catch (e) {
-        console.log(e)
-      }
-    },
+    ...mapActions({
+      login: 'auth/login',
+    }),
   },
 }
 </script>
