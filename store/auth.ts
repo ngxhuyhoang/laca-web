@@ -8,6 +8,7 @@ export const state = () => ({
     name: 'Huy Hoàng Nguyễn',
     email: 'ngxhuyhoang@lacareview.com',
     avatar: 'https://i.pravatar.cc/85',
+    cover: 'https://picsum.photos/1920/200?random=1',
   },
 })
 

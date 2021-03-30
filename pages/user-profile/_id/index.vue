@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-sheet rounded="lg" class="a">
-      <v-img src="https://picsum.photos/1920/200?random=1" class="cover" />
+      <v-img :src="user.cover" class="cover" />
       <v-avatar size="150" class="avatar">
         <v-img :src="user.avatar" />
       </v-avatar>
@@ -9,11 +9,11 @@
       <div class="count mt-5">
         <v-row>
           <v-col cols="6">
-            <b>Followers</b>
+            <b>Người theo dõi</b>
             <p>1000</p>
           </v-col>
           <v-col cols="6">
-            <b>Following</b>
+            <b>Đang theo dõi</b>
             <p>1000</p>
           </v-col>
         </v-row>
@@ -23,14 +23,17 @@
     <v-row class="mt-10">
       <v-col cols="4">
         <v-sheet rounded="lg">
-          <v-card v-for="n in 5" :key="n" elevation="0">
-            <v-card-title>Thông tin</v-card-title>
-            <v-card-text
-              >across feet got cast die let sense drove suit recognize balloon
+          <v-card elevation="0">
+            <v-card-title>Bio</v-card-title>
+            <v-card-text>
+              across feet got cast die let sense drove suit recognize balloon
               develop fun steep time thing strong building held depend
-              frequently tune evidence flew</v-card-text
-            >
+              frequently tune evidence flew
+            </v-card-text>
           </v-card>
+          <v-btn elevation="0" class="update-info-button" @click="dialog = true"
+            >Cập nhật thông tin</v-btn
+          >
         </v-sheet>
       </v-col>
       <v-col cols="8">
@@ -91,6 +94,33 @@
         </v-sheet>
       </v-col>
     </v-row>
+
+    <v-dialog v-model="dialog" width="50%" persistent>
+      <v-sheet>
+        <v-container>
+          <h3 class="mb-3">Tiểu sử</h3>
+          <v-textarea v-model="bio" height="50" outlined label="bio">
+          </v-textarea>
+          <v-row>
+            <v-spacer />
+            <v-btn
+              text
+              elevation="0"
+              class="save-button"
+              @click="dialog = false"
+              >Cancel</v-btn
+            >
+            <v-btn
+              color="warning"
+              elevation="0"
+              class="save-button"
+              @click="dialog = false"
+              >Lưu</v-btn
+            >
+          </v-row>
+        </v-container>
+      </v-sheet>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -99,6 +129,11 @@ import { mapState } from 'vuex'
 
 export default {
   layout: 'app-layout',
+  data: () => ({
+    dialog: false,
+    bio: '',
+    model: false,
+  }),
   computed: mapState({
     user: (state) => state.auth.user,
   }),
@@ -132,5 +167,17 @@ export default {
   width: 25%;
   margin: 0 auto;
   text-align: center;
+}
+
+.update-info-button {
+  width: 90%;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.save-button {
+  margin-right: 16px;
+  margin-bottom: 16px;
 }
 </style>
