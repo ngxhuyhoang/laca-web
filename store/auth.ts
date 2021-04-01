@@ -1,7 +1,4 @@
 import firebase from 'firebase/app'
-import Vuex from 'vuex'
-
-const a = new Vuex.Store({})
 
 export const state = () => ({
   user: {

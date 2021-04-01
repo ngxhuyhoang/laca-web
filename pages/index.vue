@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>{{ test }}</h1>
     <v-container class="mt-5">
       <v-row>
-        <v-col v-for="n in 8" :key="n" cols="3">
+        <v-col v-for="post in postList.data" :key="post.id" cols="3">
           <v-card nuxt rounded="lg">
             <v-card-title>
               <v-row>
@@ -28,17 +27,14 @@
                 </v-col>
               </v-row>
             </v-card-title>
-            <v-img
-              height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            ></v-img>
-            <v-card-title>
-              <NuxtLink to="/detail/1"> Cafe Badilico </NuxtLink>
+            <v-img height="250" :src="post.images[0]"></v-img>
+            <v-card-title class="single-line">
+              <NuxtLink to="/detail/1">{{ post.name }}</NuxtLink>
             </v-card-title>
             <v-card-text>
               <v-row align="center" class="mx-0">
                 <v-rating
-                  value="4.5"
+                  :value="post.rating"
                   color="amber"
                   dense
                   half-increments
@@ -94,8 +90,8 @@
   </div>
 </template>
 
-<script>
-import { mapState } from 'vuex'
+<script lang="ts">
+import { mapState, mapActions } from 'vuex'
 
 export default {
   layout: 'home',
@@ -113,7 +109,24 @@ export default {
     }
   },
   computed: mapState({
-    test: (state) => state.auth.test,
+    postList: (state) => state.home.postList,
   }),
+  mounted() {
+    this.getPostList()
+  },
+  methods: {
+    ...mapActions({
+      getPostList: 'home/getPostList',
+    }),
+  },
 }
 </script>
+
+<style scoped>
+.single-line {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+}
+</style>
